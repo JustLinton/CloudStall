@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CreateStallActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:subtitleTextColor="@android:color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="我的路摊管理"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/white">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="@dimen/dimen_common_small"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_card_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/stall27"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/header_text"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/img_card_2"
+                        android:layout_margin="@dimen/dimen_common"
+                        android:text="用户 3853 的小店"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_2"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dimen_common_small">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ownerInfoGroup"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_below="@id/sepLine1"
+                            >
+                            <com.berrysdu.cloudstall.CircleImageView
+                                android:id="@+id/ivicon"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="25dp"
+                                android:layout_gravity="top"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/head1"/>
+
+                            <TextView
+                                android:id="@+id/owner_name"
+                                android:layout_toEndOf="@id/ivicon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_centerVertical="true"
+                                android:text="用户3853"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </RelativeLayout>
+
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="@dimen/dimen_common_small"
+                            android:src="@drawable/ic_share_white_24dp"
+                            android:tint="@color/gray_deep" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:layout_below="@id/topBar"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/material_design_5"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_card_1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_1"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:textSize="26sp"
+                        android:text="路摊管理 >"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/tv_card_1_title"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_card_1_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sepLine1"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="8dp"
+                        android:text="——尽在掌握"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:id="@+id/loginBtn"
+                        android:layout_below="@id/tv_card_1_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:backgroundTint="@color/colorAccent"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="上架新商品"
+                        android:textColor="#FFFFFF"
+                        app:rippleColor="@color/colorPrimary" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:id="@+id/loginBtn2"
+                        android:layout_below="@id/loginBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:backgroundTint="@color/colorAccent"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="管理商品"
+                        android:textColor="#FFFFFF"
+                        app:rippleColor="@color/colorPrimary" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_19"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="@dimen/dimen_common"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="@dimen/dimen_common_small"
+                    android:clickable="true"
+                    android:layout_below="@id/topBar"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/img_card_19header"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_card_19_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_card_19header"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="@dimen/dimen_common"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:textSize="18sp"
+                            android:text="今日访问量 >\n "
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_card_19_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_card_19_title"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:layout_marginBottom="8dp"
+                            android:text="71"
+                            android:textSize="44sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:id="@+id/tv_card_19_subtitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:clickable="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="@color/colorAccent"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="查看时间线"
+                            android:textColor="#FFFFFF"
+                            app:rippleColor="@color/colorPrimary" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_14"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="@dimen/dimen_common_small"
+                    android:clickable="true"
+                    android:layout_below="@id/topBar"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/img_card_12header"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_card_12_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_card_12header"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="@dimen/dimen_common"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:textSize="18sp"
+                            android:text="今日销售额(RMB) >"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_card_12_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_card_12_title"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:layout_marginBottom="8dp"
+                            android:text="453"
+                            android:textSize="44sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:id="@+id/tv_card_12_subtitle2"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:clickable="true"
+                            android:backgroundTint="@color/colorAccent"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="交易明细"
+                            android:textColor="#FFFFFF"
+                            app:rippleColor="@color/colorPrimary" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:layout_below="@id/topBar"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/img_card_15header"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:background="@color/colorPrimary"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_card_15_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_15header"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:textSize="18sp"
+                        android:text="曲线图 >\n "
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_card_15_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_card_15_title"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorAccent"
+                        android:text="流量 +1.2% \n "
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_card_16"
+                        android:layout_below="@id/tv_card_15_title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/stat1"
+                        android:scaleType="centerCrop" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:id="@+id/tv_card_15_subtitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/img_card_16"
+                        android:clickable="true"
+                        android:backgroundTint="@color/colorAccent"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="16dp"
+                        android:text=" "
+                        android:textColor="#FFFFFF"
+                        app:rippleColor="@color/colorPrimary" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_13"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="@dimen/dimen_common"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="@dimen/dimen_common_small"
+                    android:clickable="true"
+                    android:layout_below="@id/topBar"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/img_card_1header"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_card_11_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_card_1header"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="@dimen/dimen_common"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:textSize="18sp"
+                            android:text="新增关注 >\n "
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_card_11_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_card_11_title"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:layout_marginBottom="8dp"
+                            android:text="18"
+                            android:textSize="44sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:id="@+id/tv_card_11_subtitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:clickable="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="@color/colorAccent"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="我的粉丝"
+                            android:textColor="#FFFFFF"
+                            app:rippleColor="@color/colorPrimary" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_17"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="@dimen/dimen_common_small"
+                    android:clickable="true"
+                    android:layout_below="@id/topBar"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/img_card_17header"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_card_17_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_card_17header"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="@dimen/dimen_common"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:textSize="18sp"
+                            android:text="新增收藏 >\n "
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_card_17_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_card_17_title"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="@dimen/dimen_common"
+                            android:layout_marginBottom="8dp"
+                            android:text="99"
+                            android:textSize="44sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:id="@+id/tv_card_17_subtitle2"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:clickable="true"
+                            android:backgroundTint="@color/colorAccent"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="收藏我的"
+                            android:textColor="#FFFFFF"
+                            app:rippleColor="@color/colorPrimary" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:id="@+id/loginBtn6"
+                android:layout_below="@id/policy"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:backgroundTint="#EF5350"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:text="注销路摊"
+                android:textColor="#FFFFFF"
+                app:rippleColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/efab_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/colorAccent"
+        android:textColor="@color/gray_deep"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="开始营业"
+        app:icon="@drawable/baseline_play_arrow_white_24dp" />
+</RelativeLayout>

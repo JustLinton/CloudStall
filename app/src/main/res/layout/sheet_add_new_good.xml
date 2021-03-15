@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF9C4"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="9dp"
+        android:background="@drawable/bar"
+        android:id="@+id/topBar"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_1"
+                android:layout_below="@id/topBar"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="40dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/stall311"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_card_1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_1"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:textSize="26sp"
+                        android:textColor="@color/gray_deep"
+                        android:text="上新 >"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/inputLayout1"
+                        />
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/sepLine2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/inputLayout1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/userNameReg"
+                            android:hint="商品名称"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/sepLine1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/itemDescInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:id="@+id/stallDescInput"
+                            android:hint="商品简介"
+                            android:maxLength="20"
+                            android:maxLines="15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/tv_card_1_title"
+                        />
+                    <TextView
+                        android:id="@+id/subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/itemDescInputGp"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="商品标签"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_below="@id/subtitle1"
+                        android:paddingTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:paddingStart="@dimen/dimen_common"
+                        android:paddingEnd="@dimen/dimen_common"
+                        android:paddingBottom="@dimen/dimen_common_small"
+                        android:translationZ="@dimen/dimen_common_small"
+                        app:chipSpacingHorizontal="@dimen/dimen_common"
+                        app:chipSpacingVertical="@dimen/dimen_common_very_small"
+                        app:singleSelection="false">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/unkown_chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="未分类" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/food_chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="美食" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/grocery_chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="杂货" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/book_chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="书籍" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/more1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="化妆品" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/more2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="品质家具" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/more3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:text="更多种类待添加" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine3"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/inputLayout3"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/sepLine2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/inputLayout2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/userNameReg2"
+                            android:hint="价格"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/policy"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/sepLine3"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="附加"
+                            android:layout_marginBottom="16dp"
+                            />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:checked="false"
+                            android:switchPadding="@dimen/dimen_common"
+                            android:textColor="@color/gray_deep"
+                            android:text="推广服务" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch2"
+                            android:layout_below="@id/switch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:checked="true"
+                            android:switchPadding="@dimen/dimen_common"
+                            android:textColor="@color/gray_deep"
+                            android:text="发动态" />
+
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:id="@+id/loginBtn"
+                        android:layout_below="@id/policy"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:clickable="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="上新！"
+                        android:textColor="#FFFFFF"
+                        app:rippleColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/loginBtn"
+                        android:layout_centerHorizontal="true"
+                        >
+
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_card_1_action2"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_common_small"
+                            android:text="分享 >" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_card_1_action1"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_common_small"
+                            android:text="服务条款 >" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

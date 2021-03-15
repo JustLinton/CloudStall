@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item android:id="@+id/side_main_menu"
+        android:title="主页"
+        app:showAsAction="never"/>
+    <item android:id="@+id/side_search"
+        android:title="搜索"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/other" android:title="@string/app_name"
+        app:showAsAction="never"
+        >
+
+        <item android:title="热点">
+            <menu>
+                <item android:id="@+id/T1_I1"
+                    android:title="好物雷达"/>
+                <item android:id="@+id/T1_I2"
+                    android:title="摊主速成" />
+
+            </menu>
+        </item>
+
+        <item android:title="功能">
+            <menu>
+                <item android:id="@+id/T2_I1"
+                    android:title="Debug菜单"/>
+                <item android:id="@+id/T2_I2"
+                    android:title="版权声明"/>
+                <item android:id="@+id/T2_I3"
+                    android:title="退出登录" />
+
+            </menu>
+        </item>
+
+
+    </item>
+
+
+</menu>

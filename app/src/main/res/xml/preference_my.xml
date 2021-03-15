@@ -1,0 +1,7 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="逛哪儿开发版 调试菜单">
+        <SwitchPreference android:title="已拥有了路摊" android:key="ownStall" android:defaultValue="false"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

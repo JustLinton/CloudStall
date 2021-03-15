@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@drawable/material_design_1"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:background="@color/colorPrimary"
+        android:paddingStart="16dp"
+        android:gravity="center_vertical"
+        android:layout_height="?actionBarSize"
+        android:text="好物雷达"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <com.berrysdu.cloudstall.cardSlide.CardSlidePanel
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/image_slide_panel"
+                android:layout_width="wrap_content"
+                card:bottomMarginTop="40dp"
+                card:yOffsetStep="22dp"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/card_bottom_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.google.android.material.button.MaterialButton
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/card_left_btn"
+                        android:layout_height="48dp"
+                        app:iconTint="@color/colorPrimaryDark"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:clickable="true"
+                        android:backgroundTint="#FFFFFF"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="不爱"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:icon="@drawable/baseline_close_white_24dp_pri"
+                        />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:clickable="true"
+                        android:textColor="#FFFFFF"
+                        app:icon="@drawable/ic_share_white_24dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:backgroundTint="#FFFFFF"
+                        android:clickable="true"
+                        android:id="@+id/card_right_btn"
+                        app:iconTint="@color/colorPrimaryDark"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="爱了"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:icon="@drawable/baseline_favorite_white_24dp_pri" />
+                </LinearLayout>
+
+                <com.berrysdu.cloudstall.cardSlide.CardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.berrysdu.cloudstall.cardSlide.CardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.berrysdu.cloudstall.cardSlide.CardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.berrysdu.cloudstall.cardSlide.CardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+            </com.berrysdu.cloudstall.cardSlide.CardSlidePanel>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

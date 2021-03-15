@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scanCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_common"
+            android:layout_marginTop="@dimen/dimen_common_small"
+            android:layout_marginEnd="@dimen/dimen_common"
+            android:layout_marginBottom="@dimen/dimen_common_small"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_scan_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/material_design_11"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/scanCard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_scan_card"
+                    android:layout_marginStart="@dimen/dimen_common"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="26sp"
+                    android:text="Ta 的路摊 >"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/myStallCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_common"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/dimen_common"
+            android:layout_marginBottom="@dimen/dimen_common_small"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_card_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/material_design_11"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_card_1_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_card_1"
+                    android:layout_marginStart="@dimen/dimen_common"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="26sp"
+                    android:text="Ta 的摊库 >"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/card_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_common"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/dimen_common"
+            android:layout_marginBottom="@dimen/dimen_common_small"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/notice_card_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/material_design_4"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/noticeCard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notice_card_img"
+                    android:layout_marginStart="@dimen/dimen_common"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:text="新动态 >"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+                <TextView
+                    android:id="@+id/tv_card_1_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noticeCard_title"
+                    android:layout_marginStart="@dimen/dimen_common"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:layout_marginEnd="@dimen/dimen_common"
+                    android:layout_marginBottom="100dp"
+                    android:text="@string/large_text"
+                    android:maxLines="15"
+                    android:ellipsize="end"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

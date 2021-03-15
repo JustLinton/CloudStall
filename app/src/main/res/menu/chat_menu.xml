@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/notificationsIcon"
+        android:title="Notifications"
+        android:icon="@drawable/baseline_notifications_white_24dp"
+        android:orderInCategory="60"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/other" android:title="@string/app_name"
+        app:showAsAction="never"
+        >
+        <group >
+            <item android:id="@+id/new_game"
+                android:icon="@drawable/ic_launcher_foreground"
+                android:title="屏蔽此人"/>
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_launcher_foreground"
+                android:title="查看聊天记录" />
+        </group>
+
+    </item>
+
+
+
+</menu>

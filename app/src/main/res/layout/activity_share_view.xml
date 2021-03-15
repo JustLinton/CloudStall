@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_share_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_share_view"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_share_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_share_view"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/dimen_common"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:translationZ="8dp">
+
+        <ImageView
+            android:layout_width="320dp"
+            android:id="@+id/itemPic"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:scaleType="centerCrop"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rela_round_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/round_big"
+            android:transitionName="shareView" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_share_view_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp"
+        android:layout_margin="@dimen/dimen_common_small"
+        android:text="CopyRight 2020 BerrySDU" />
+    <TextView
+        android:id="@+id/tv_share_view_tip223"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp"
+        android:layout_margin="@dimen/dimen_common_small"
+        android:text="CopyRight 2020 BerrySDU" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/card_share_view"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_card_3_title"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_common"
+                        android:textColor="@color/gray_deep"
+                        android:text="喜欢吗？" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_card_3_action_1"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/tv_card_3_title"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common_medium"
+                        android:clickable="true"
+                        android:text="收藏"
+                        android:textColor="#FFFFFF" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_card_3_action_2"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/tv_card_3_title"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common_medium"
+                        android:layout_toStartOf="@id/btn_card_3_action_1"
+                        android:clickable="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="预定" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_4"
+                android:layout_below="@+id/card_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="40dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="2dp">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/card_3"
+                    >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_card_4_title"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:textColor="@color/gray_deep"
+                        android:text="商品信息" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/tv_card_4_title"
+                        />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/firstLineDetail"
+                        android:layout_below="@id/sepLine1"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_card_4_balance"
+                            style="@style/TextAppearance.MaterialComponents.Headline5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:text="RMB 40" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ownerInfoGroup"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@id/tv_card_4_balance"
+                            >
+                            <com.berrysdu.cloudstall.CircleImageView
+                                android:id="@+id/ivicon"
+                                android:layout_marginStart="16dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="25dp"
+                                android:layout_gravity="top"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/head1"/>
+
+                            <TextView
+                                android:id="@+id/owner_name"
+                                android:layout_toEndOf="@id/ivicon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_centerVertical="true"
+                                android:text="用户3853"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_card_4_des"
+                        android:layout_below="@id/firstLineDetail"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:textSize="14sp"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:textColor="@color/gray_deep"
+                        android:text="示例商品信息.\n可以有无数行!!!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!" />
+
+                </RelativeLayout>
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</RelativeLayout>

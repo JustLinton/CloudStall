@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/outLineLayout"
+    android:background="#FFF9C4"
+    >
+
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="9dp"
+        android:background="@drawable/bar"
+        android:id="@+id/topBar"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        />
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_common"
+    android:layout_marginTop="@dimen/dimen_common_small"
+    android:layout_marginEnd="@dimen/dimen_common"
+    android:layout_marginBottom="@dimen/dimen_common_small"
+    android:clickable="true"
+    android:layout_below="@id/topBar"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_card_1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/stall4"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_card_1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_card_1"
+            android:layout_marginStart="@dimen/dimen_common"
+            android:layout_marginTop="@dimen/dimen_common"
+            android:layout_marginEnd="@dimen/dimen_common"
+            android:textSize="26sp"
+            android:text="二维码结算 >"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/sepLine1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray_light"
+            android:layout_below="@id/tv_card_1_title"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ownerInfoGroup"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/sepLine1"
+            >
+            <com.berrysdu.cloudstall.CircleImageView
+                android:id="@+id/ivicon"
+                android:layout_alignParentStart="true"
+                android:layout_width="25dp"
+                android:layout_gravity="top"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/head1"/>
+
+            <TextView
+                android:id="@+id/owner_name"
+                android:layout_toEndOf="@id/ivicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:text="用户3853"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <TextView
+                android:id="@+id/owner_stall"
+                android:layout_toEndOf="@id/owner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:text="憨豆先生的店"
+                android:textColor="@color/gray_deep"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_card_1_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ownerInfoGroup"
+            android:layout_marginStart="@dimen/dimen_common"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dimen_common"
+            android:layout_marginBottom="@dimen/dimen_common"
+            android:text="商品结算 - 请指定金额"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/tv_card_1_subtitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:id="@+id/inputLayout1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/userNameReg"
+                android:hint="金额"
+                android:maxLength="20"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+            android:id="@+id/card_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_below="@id/inputLayout1"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+        >
+
+            <com.google.android.material.button.MaterialButton
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:id="@+id/card_left_btn"
+                android:layout_height="48dp"
+                app:iconTint="#FFFFFF"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:backgroundTint="#1E88E5"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="支付宝"
+                android:textColor="#FFFFFF"
+                app:icon="@drawable/alipayp1"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:backgroundTint="#FFFFFF"
+                android:clickable="true"
+                android:id="@+id/card_right_btn"
+                app:iconTint="@color/colorPrimaryDark"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="微信支付"
+                android:textColor="@color/colorPrimaryDark"
+                app:icon="@drawable/wechatp1" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/sepLine2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray_light"
+            android:layout_below="@id/card_bottom_layout"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stallInfoBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sepLine2"
+            android:layout_margin="@dimen/dimen_common_small"
+            android:text="商店信息" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_card_1_action2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sepLine2"
+            android:layout_marginTop="@dimen/dimen_common_small"
+            android:layout_marginBottom="@dimen/dimen_common_small"
+            android:layout_toEndOf="@id/stallInfoBtn"
+            android:text="投诉" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="horizontal" >
+
+    <com.berrysdu.cloudstall.CircleImageView
+        android:id="@+id/ivicon"
+        android:layout_centerVertical="true"
+        android:layout_width="45dp"
+        android:layout_gravity="top"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/head1"/>
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/left_bubble"
+        android:text="权志龙好帅！！！" />
+
+</LinearLayout>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CreateStallActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:subtitleTextColor="@android:color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="逛哪儿"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/white">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:layout_below="@id/topBar"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/material_design_3" />
+
+                    <TextView
+                        android:id="@+id/tv_card_1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_1"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:text="完善路摊信息 >"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/sepLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/tv_card_1_title"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/gray_light" />
+
+
+                    <TextView
+                        android:id="@+id/tv_card_1_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sepLine1"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="只需几步\n即刻拥有自己的地盘！"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_card_1_action1"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_card_1_subtitle"
+                        android:layout_margin="@dimen/dimen_common_small"
+                        android:text="服务条款" />
+
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/generalInfoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:layout_below="@id/topBar"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/geneCardHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:background="@color/colorAccent"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/geneCardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/geneCardHead"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:textSize="26sp"
+                        android:text="基本信息 >"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/geneCardTitle"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/geneCardSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sepLine2"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="这里是\n您路摊的基本信息。"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/geneCardSubTitle"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallTitleInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stallTitleInput"
+                            android:hint="路摊名称"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/stallTitleInputGp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallDescInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:id="@+id/stallDescInput"
+                            android:hint="路摊简介"
+                            android:maxLength="20"
+                            android:maxLines="15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/stallDescInputGp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallAddOnInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stallAddOnInput"
+                            android:hint="一句话形容你的路摊"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/geneCardChildTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stallAddOnInputGp"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="常驻地"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="32dp"
+                        android:id="@+id/spinnerLinearLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/geneCardChildTitle1"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/country_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/country_array" />
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/county_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/county_array" />
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/city_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_common"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/city_array" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/additionalInfoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:layout_below="@id/topBar"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/additCardHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:background="@color/colorAccent"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/additCardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/additCardHead"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:textSize="26sp"
+                        android:text="附加信息 >"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sepLine3"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/gray_light"
+                        android:layout_below="@id/additCardTitle"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/additCardSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sepLine3"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="润色\n您的路摊。"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                    <TextView
+                        android:id="@+id/additCardchildTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/additCardSubTitle"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="申请路摊认证"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/additCardchildTitle1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallpermissionNameInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stallpermissionNameInput"
+                            android:hint="经营单位"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/stallpermissionNameInputGp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallpermissionInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stallpermissionInput"
+                            android:hint="经营许可证号"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/stallpermissionInputGp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallownerNameInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stallownerNameInput"
+                            android:hint="您的姓名"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/stallownerNameInputGp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:id="@+id/stallownerIDNumInputGp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stallownerIDNUMInput"
+                            android:hint="身份证号"
+                            android:maxLength="20"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/additCardchildTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stallownerIDNumInputGp"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="路摊认证类别"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/permission_v_spinner"
+                        android:layout_below="@+id/additCardchildTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="8dp"
+                        android:entries="@array/permission_spinner_array" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/policy"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="32dp"
+                        android:layout_below="@id/permission_v_spinner"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="附加"
+                            android:layout_marginBottom="16dp"
+                            />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:checked="true"
+                            android:switchPadding="@dimen/dimen_common"
+                            android:textColor="@color/gray_deep"
+                            android:text="同意“逛哪儿” app 用户条款" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:id="@+id/loginBtn"
+                android:layout_below="@id/policy"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="32dp"
+                android:text="确认创建"
+                android:textColor="#FFFFFF"
+                app:rippleColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

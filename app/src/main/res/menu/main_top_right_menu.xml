@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/baseline_search_white_24dp"
+        android:orderInCategory="60"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/other" android:title="@string/app_name"
+        app:showAsAction="never"
+        >
+        <group >
+            <item android:id="@+id/scan_QR"
+                android:title="扫码"/>
+            <item android:id="@+id/settings"
+                android:title="设置" />
+        </group>
+
+    </item>
+
+
+</menu>

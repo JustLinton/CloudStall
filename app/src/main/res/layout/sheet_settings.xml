@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF9C4"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="9dp"
+        android:background="@drawable/bar"
+        android:id="@+id/topBar"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_1"
+                android:layout_below="@id/topBar"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="40dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/fragPlaceHolder"
+                   />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

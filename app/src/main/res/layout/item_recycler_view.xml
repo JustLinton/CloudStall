@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_item_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="@dimen/dimen_common_small"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="@dimen/dimen_common_small"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_common">
+
+        <com.berrysdu.cloudstall.CircleImageView
+            android:id="@+id/rela_round"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/material_design_1"/>
+
+        <TextView
+            android:id="@+id/titleRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/rela_round"
+            android:text="商品标题"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+        <TextView
+            android:id="@+id/balanceRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleRec"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/dimen_common_very_small"
+            android:layout_toEndOf="@id/rela_round"
+            android:text="RMB 20" />
+
+        <TextView
+            android:id="@+id/descriptionRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/balanceRec"
+            android:layout_marginTop="@dimen/dimen_common_very_small"
+            android:layout_toEndOf="@id/rela_round"
+            android:textColor="@color/gray_deep"
+            android:text="描述" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
